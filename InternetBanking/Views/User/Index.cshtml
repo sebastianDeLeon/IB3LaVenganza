@@ -1,0 +1,48 @@
+﻿@using InternetBanking.Core.Application.ViewModels.Users;
+@model LoginVM;
+
+@{
+    ViewData["Title"] = "Inicio sesion";
+}
+<div class="container mt-5">  
+    <form method="post" asp-controller="User" asp-action="Index" class="p-1 pt-0">
+        <div class="row mt-3 p-2 mx-auto">
+            <div class="col-12 text-center">
+                <h3>Banking</h3>
+            </div>
+        </div>
+        <div class="row mt-2 p-1 pt-0 mx-auto">
+            <div class="col-12 text-center">
+                <h5>Inicio de sesion</h5>
+            </div>
+        </div>
+        @if (Model.HasError)
+        {
+            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+                <p>@Model.Error</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <div class="row p-3 m-2">
+            <div class="col-12 mx-auto justify-content-center">
+                <div class="form-group  align-items-center " style="margin-left:33%">
+                    <div class="w-50 me-10   ">
+                        <input asp-for="@Model.Email" class="form-control text-center border-1 border-dark mb-3 justify-content-center" placeholder="Email del usuario" />
+                        <span asp-validation-for="Email" class="text-danger mb-2 mt-2"></span>
+                    </div>
+                    <div class="w-50 me-10 ">
+                        <input asp-for="@Model.Password" class="form-control text-center border-1 border-dark mt-3 justify-content-center" placeholder="Contraseña del usuario" />
+                        <span asp-validation-for="Password" class="text-danger mt-1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mx-auto text-center mt-2 p-3 pt-0">
+                <div class="form-group  text-center m-2 my-2 pt-1 pb-1">
+                    <button type="submit" class="btn btn-dark mb-2">Iniciar sesion</button>
+                    <br />
+                </div>
+                <a asp-controller="User" asp-action="ForgotPassword" class="text-muted text-dark">Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+    </form>
+</div>
