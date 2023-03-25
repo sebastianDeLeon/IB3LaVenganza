@@ -9,6 +9,6 @@ namespace InternetBanking.Core.Application.ViewModels.TypeAccount
     public class SaveTypeAccountVM
     {
         public int Id { get; set; }
-        public string Title { get; set; }
+        public string? Title { get; set; }
     }
 }

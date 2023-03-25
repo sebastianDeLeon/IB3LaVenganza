@@ -18,6 +18,6 @@ namespace InternetBanking.Core.Application.Dtos.Account
         public List<string> Roles { get; set; }
         public bool IsVerified { get; set; }
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
     }
 }

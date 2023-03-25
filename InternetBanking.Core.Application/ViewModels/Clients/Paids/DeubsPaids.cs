@@ -19,6 +19,6 @@ namespace InternetBanking.Core.Application.ViewModels.Clients.Paids
         [Range(0, double.MaxValue, ErrorMessage = "Debes ingresar un monto apartir de 0. ")]
         public double Amount { get; set; }
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
     }
 }

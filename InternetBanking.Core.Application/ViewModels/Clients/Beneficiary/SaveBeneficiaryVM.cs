@@ -10,7 +10,7 @@ namespace InternetBanking.Core.Application.ViewModels.Clients.Beneficiary
     public class SaveBeneficiaryVM
     {
         public int Id { get; set; }
-        public string UserId { get; set; } // My ID
+        public string? UserId { get; set; } // My ID
 
         [Required(ErrorMessage = "Debes ingresar un numero de cuenta")]
         public int BeneficiaryCode { get; set; }

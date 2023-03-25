@@ -14,22 +14,20 @@
 else
 {
     <div class="card">
-        <div class="card-header justify-content-center">
+        <div class="card-header bg-dark text-light justify-content-center">
             Administrar usuarios
         </div>
         <div class="card-body">
             <div class="d-flex justify-content-between ">
-                <div class="justify-content-start">
-                    <p>Tenga pendiente de que no puede editar su propio usuario</p>
-                </div>
+                
                 <div class="justify-content-end">
                     <a asp-controller="Admin" asp-action="CreateClient" class="btn btn-outline-secondary btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo cliente</a>
                     <a asp-controller="Admin" asp-action="CreateAdmin" class="btn btn-outline-dark btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo administrador</a>
                 </div>
             </div>
             <hr />
-                <table class="table table-hover">
-                    <thead>
+                <table class="table">
+                    <thead class="table">
                         <tr>
                             <th>Nombre de usuario</th>
                             <th>Email</th>

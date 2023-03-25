@@ -308,13 +308,15 @@ namespace WebAppl.InternetBanking.Controllers
                 vm.Error = "Esta cuenta no esta disponible para haccer transaciones.";
                 return View(vm);
             }
-
-            if (vm.SaveAccount.IdAccount  != (int)TypesAccountEnum.Cuentadeahorro && vm.SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
+            
+            /*
+            if (vm.SaveAccount.IdAccount != (int)TypesAccountEnum.Cuentadeahorro && vm.SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
             {
                 vm.HasError = true;
                 vm.Error = "Solo esta disponible entre cuentas de ahorros.";
                 return View(vm);
             }
+            */
 
 
             if (vm.Receiver.IdClient == user.Id)
@@ -676,6 +678,7 @@ namespace WebAppl.InternetBanking.Controllers
             SingletonRepository.Instance.Beneficary = vm;
             return View(vm);
         }
+
         [HttpPost]
         public async Task<IActionResult> BeneficiaryPaidPost(BeneficaryPaid vm)
         {
