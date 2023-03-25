@@ -20,6 +20,6 @@ namespace InternetBanking.Core.Application.ViewModels.Products
         public string IdClient { get; set; }
         public double Paid { get; set; } = 0;
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
     }
 }
