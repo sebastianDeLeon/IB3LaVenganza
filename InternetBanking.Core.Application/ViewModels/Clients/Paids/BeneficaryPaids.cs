@@ -20,13 +20,13 @@ namespace InternetBanking.Core.Application.ViewModels.Clients.Paids
         [Required(ErrorMessage = "Este campo es obligatorio")]
         [Range(0, double.MaxValue, ErrorMessage = "Debes ingresar un monto apartir de 0. ")]
         public double Amount { get; set; }
-        public SaveBeneficiaryVM Beneficiary { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public SaveProductVM SaveAccount { get; set; }
-        public SaveProductVM AccountBeneficiary { get; set; }
+        public SaveBeneficiaryVM? Beneficiary { get; set; }
+        public string? Firstname { get; set; }
+        public string? Lastname { get; set; }
+        public SaveProductVM? SaveAccount { get; set; }
+        public SaveProductVM? AccountBeneficiary { get; set; }
 
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
     }
 }

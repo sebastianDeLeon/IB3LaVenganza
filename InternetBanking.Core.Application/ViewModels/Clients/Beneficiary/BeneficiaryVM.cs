@@ -12,11 +12,11 @@ namespace InternetBanking.Core.Application.ViewModels.Clients.Beneficiary
     public class BeneficiaryVM
     {
         public int Id { get; set; }
-        public string UserId { get; set; }
-        public UserVM User { get; set; }
+        public string? UserId { get; set; }
+        public UserVM? User { get; set; }
 
         public int BeneficiaryCode { get; set; }
-        public ProductsVM Beneficiary { get; set; }
+        public ProductsVM? Beneficiary { get; set; }
 
 
 

@@ -59,7 +59,7 @@ namespace WebAppl.InternetBanking.Controllers
 
             ViewBag.BeneficiaryList = item;
 
-
+            
             if (!ModelState.IsValid)
             {
                 return RedirectToAction("Index", new SaveBeneficiaryVM());

@@ -12,12 +12,12 @@ namespace WebAppl.InternetBanking.middlewares
 {
     public class SelectHome: IAsyncActionFilter
     {
-        private readonly IHttpContextAccessor httpContext;
+        private readonly IHttpContextAccessor _httpContext;
         private readonly AuthenticationResponse user;
         public SelectHome(IHttpContextAccessor httpContext)
         {
-            this.httpContext = httpContext;
-            user = httpContext.HttpContext.Session.Get<AuthenticationResponse>("user");
+            _httpContext = httpContext;
+            user = _httpContext.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)

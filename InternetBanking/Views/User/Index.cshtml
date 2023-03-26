@@ -4,45 +4,46 @@
 @{
     ViewData["Title"] = "Inicio sesion";
 }
-<div class="container mt-5">  
-    <form method="post" asp-controller="User" asp-action="Index" class="p-1 pt-0">
-        <div class="row mt-3 p-2 mx-auto">
-            <div class="col-12 text-center">
-                <h3>Banking</h3>
-            </div>
-        </div>
-        <div class="row mt-2 p-1 pt-0 mx-auto">
-            <div class="col-12 text-center">
-                <h5>Inicio de sesion</h5>
-            </div>
-        </div>
-        @if (Model.HasError)
-        {
-            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
-                <p>@Model.Error</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        }
-        <div class="row p-3 m-2">
-            <div class="col-12 mx-auto justify-content-center">
-                <div class="form-group  align-items-center " style="margin-left:33%">
-                    <div class="w-50 me-10   ">
-                        <input asp-for="@Model.Email" class="form-control text-center border-1 border-dark mb-3 justify-content-center" placeholder="Email del usuario" />
+
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://img.freepik.com/vector-gratis/servicios-financieros-transaccion-financiera-comercio-electronico-pago-electronico_335657-3134.jpg"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form  method="post" asp-controller="User" asp-action="Index">
+          
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Internet Banking</p>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example3">Email address</label>
+            <input asp-for="@Model.Email" class="form-control form-control-lg" placeholder="Email del usuario" />
                         <span asp-validation-for="Email" class="text-danger mb-2 mt-2"></span>
-                    </div>
-                    <div class="w-50 me-10 ">
-                        <input asp-for="@Model.Password" class="form-control text-center border-1 border-dark mt-3 justify-content-center" placeholder="Contraseña del usuario" />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Password</label>
+            <input asp-for="@Model.Password" class="form-control form-control-lg" placeholder="Contraseña del usuario" />
                         <span asp-validation-for="Password" class="text-danger mt-1"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 mx-auto text-center mt-2 p-3 pt-0">
-                <div class="form-group  text-center m-2 my-2 pt-1 pb-1">
-                    <button type="submit" class="btn btn-dark mb-2">Iniciar sesion</button>
-                    <br />
-                </div>
-                <a asp-controller="User" asp-action="ForgotPassword" class="text-muted text-dark">Olvidaste tu contraseña?</a>
-            </div>
-        </div>
-    </form>
-</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <a asp-controller="User" asp-action="ForgotPassword" class="text-muted text-dark">Olvidaste tu contraseña?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>

@@ -6,14 +6,14 @@
 @{
     var User = httpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
     var isAdmin = User != null ? User.Roles.Any(r => r == "Admin") : false;
-    var isBasic = User != null ? User.Roles.Any(r => r == "Basic") : false;
+    var isBasic = User != null ? User.Roles.Any(r => r == "Basic") : false;  
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banco de los Programadores - @ViewData["Title"]</title>
+    <title>InternetBanking - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/site.css" />
@@ -21,7 +21,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
+            <div class="container offset-2">
                 <a class="navbar-brand" asp-area="" asp-controller="User" asp-action="Index"><strong>Home</strong></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@
                         @if (User != null)
                         {
                             <li class="nav-item text-end">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">Cerrar Sesion <i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">Cerrar Sesion </a>
                             </li>
                         }
                     </ul>
@@ -78,7 +78,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; @DateTime.Today - WebAppl.Internet_banking - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; @DateTime.Today - InternetBanking
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

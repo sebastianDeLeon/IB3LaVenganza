@@ -8,8 +8,8 @@ namespace InternetBanking.Core.Application.Dtos.Account
 {
     public class RegisterResponse
     {
-        public string IdClient { get; set; }
+        public string? IdClient { get; set; }
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
     }
 }
