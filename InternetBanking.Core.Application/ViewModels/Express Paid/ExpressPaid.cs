@@ -21,15 +21,15 @@ namespace InternetBanking.Core.Application.ViewModels.Express_Paid
         [Required(ErrorMessage = "Debes ingresar el monto a pagar")]
         [Range(0, double.MaxValue, ErrorMessage = "Debes ingresar un monto apartir de 0. ")]
         public double Amount { get; set; }
-        public SaveProductVM Receiver { get; set; }
+        public SaveProductVM? Receiver { get; set; }
 
-        public string NameReceiver { get; set; }
-        public string LastNameReceiver { get; set; }
-        public SaveProductVM SaveAccount { get; set; }
-        public SaveProductVM AccountReceiver { get; set; }
+        public string? NameReceiver { get; set; }
+        public string? LastNameReceiver { get; set; }
+        public SaveProductVM? SaveAccount { get; set; }
+        public SaveProductVM? AccountReceiver { get; set; }
 
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
 
     }
 }

@@ -27,6 +27,6 @@ namespace InternetBanking.Core.Application.ViewModels.Clients.Paids
         public SaveProductVM AccountBeneficiary { get; set; }
 
         public bool HasError { get; set; }
-        public string Error { get; set; }
+        public string? Error { get; set; }
     }
 }
